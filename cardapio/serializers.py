@@ -10,6 +10,7 @@ class CategoriaSerializer(serializers.ModelSerializer):
 
 class ProdutoSerializer(serializers.ModelSerializer):
     categoria_nome = serializers.CharField(source='categoria.nome', read_only=True)
+    preco = serializers.DecimalField(max_digits=8, decimal_places=2)
 
     class Meta:
         model = Produto
