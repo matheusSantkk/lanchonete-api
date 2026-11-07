@@ -10,7 +10,7 @@
 
 ## 2. Tecnologias
 
-* **Python:** linguagem usada em todo o back-end (testado com Python 3.13).
+* **Python:** linguagem usada em todo o back-end (testado com Python 3.14.9).
 * **Django (6.1.3):** framework web que fornece o ORM, as migrações e o painel administrativo.
 * **Django REST Framework (3.18.3):** biblioteca em cima do Django que facilita criar a API, com serializers, viewsets e routers.
 * **Token Authentication (`rest_framework.authtoken`):** parte do DRF que gera um token para o usuário se autenticar na API.
@@ -228,8 +228,6 @@ Tela da categoria com os produtos editáveis dentro dela:
 ---
 
 ## 9. Dificuldades e aprendizados
-
-<!-- REVISAR: rascunho feito a partir do código do projeto. Ajuste para o que foi difícil de verdade para você. -->
 
 O que mais exigiu atenção foi a integração com o IBGE. Eu precisei pensar em tudo o que pode dar errado numa API de fora: demora (por isso o `timeout=10`), falta de conexão, erro 5xx do IBGE e UF que não existe. Cada caso virou uma resposta clara na minha API, `400` para UF inválida e `503` para IBGE fora do ar.
 
